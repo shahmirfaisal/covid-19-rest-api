@@ -4,6 +4,13 @@ const countryRoutes = require("./routes/country");
 
 const app = express();
 
+// CORS
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
+  next();
+});
+
 app.use(indexRoutes);
 app.use("/countries", countryRoutes);
 
