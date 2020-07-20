@@ -72,4 +72,6 @@ It includes the following properties about the country:
 
 ---
 
+If you like it then make sure to give it a star :)
+
 **_Happy Coding :)_**
