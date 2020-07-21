@@ -58,6 +58,9 @@ router.get("/:countryName", async (req, res, next) => {
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i];
     const name = $(row).children("td").eq(1).text().trim().toLowerCase();
+    
+    // We only want countries related info
+    if (countryName === "world") continue;
 
     if (countryName === name) {
       country = extractData($, row);
